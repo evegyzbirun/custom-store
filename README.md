@@ -9,6 +9,7 @@
 * 12:00 watch an example how to build a store with REACT https://youtu.be/lATafp15HWA
 * 12:30 how to make a new link, pages (NavLink)
 * 1:00 how to build cart function
+* 1:30 how we count items in cart
 
 #### the project link to github: https://github.com/evegyzbirun/custom-store.git
 #### proposal: https://docs.google.com/document/d/1DLEb0H39O4TZfGjQYIZYs9fk5j476Chi6y-29Gj5ZFM/edit

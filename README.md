@@ -10,6 +10,8 @@
 * 12:30 how to make a new link, pages (NavLink)
 * 1:00 how to build cart function
 * 1:30 how we count items in cart
+* 2:00 how to upload image when I make new product: https://www.youtube.com/watch?v=XlAs-Lid-TA 
+* 2:30 css and customize
 
 #### the project link to github: https://github.com/evegyzbirun/custom-store.git
 #### proposal: https://docs.google.com/document/d/1DLEb0H39O4TZfGjQYIZYs9fk5j476Chi6y-29Gj5ZFM/edit

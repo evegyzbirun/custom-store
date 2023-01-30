@@ -13,6 +13,8 @@
 * 2:00 how to upload image when I make new product: https://www.youtube.com/watch?v=XlAs-Lid-TA and https://www.youtube.com/watch?v=o3B9KTlod4w
 * 2:30 css and customize: https://www.youtube.com/watch?v=ZawAwPYrxGA 
 * 3:00 css and more.
+* 3:30 small planing 
+* 4:00 what are my questions
 #### the project link to github: https://github.com/evegyzbirun/custom-store.git
 #### proposal: https://docs.google.com/document/d/1DLEb0H39O4TZfGjQYIZYs9fk5j476Chi6y-29Gj5ZFM/edit
 ## Technologies Used:

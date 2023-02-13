@@ -15,6 +15,13 @@
 * 3:00 css and more.
 * 3:30 small planing 
 * 4:00 what are my questions
+
+
+#### Monday, 02/13
+* 11:53 watch an example how to build a store with REACT 2 
+
+
+
 #### the project link to github: https://github.com/evegyzbirun/custom-store.git
 #### proposal: https://docs.google.com/document/d/1DLEb0H39O4TZfGjQYIZYs9fk5j476Chi6y-29Gj5ZFM/edit
 ## Technologies Used:

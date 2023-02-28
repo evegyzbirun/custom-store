@@ -1,7 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {useForm} from "react-hook-form";
+
 
 function ReusableForm(props) {
+
+  const {register} = useForm()
+
+
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
@@ -22,9 +28,10 @@ function ReusableForm(props) {
           name='category'
           placeholder='category' />
         <input
+          ref={register}
           type='file'
-          name='image'
-          placeholder='image' />
+          name='image' />
+
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

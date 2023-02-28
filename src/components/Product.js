@@ -10,6 +10,7 @@ function Product(props) {
         <p><em>{props.color}</em></p>
         <p><em>{props.category}</em></p>
         <p><em>{props.image}</em></p>
+        
         <hr />
       </div>
     </React.Fragment>

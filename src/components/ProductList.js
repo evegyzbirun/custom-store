@@ -11,10 +11,10 @@ function ProductList(props){
         <Product 
           whenTicketClicked={props.onProductSelection}
           names={product.names}
-          sku={product.location}
+          sku={product.sku}
           color={product.color}
           category={product.category}
-          picture={product.picture}
+          image={product.image}
           id={product.id}
           key={product.id}/>
       )}
@@ -26,3 +26,5 @@ ProductList.propTypes = {
   productList: PropTypes.array,
   onProductSelection: PropTypes.func
 };
+
+export default ProductList;

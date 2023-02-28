@@ -10,7 +10,7 @@ function ProductDetail(props){
       <h3>{product.sku} - {product.names}</h3>
       <p><em>{product.color}</em></p>
       <p><em>{product.category}</em></p>
-      <p><em>{product.picture}</em></p>
+      <p><em>{product.image}</em></p>
       <button onClick={onClickingEdit}>Update Product</button>
       <button onClick={()=> onClickingDelete(product.id)}>Close Product</button>
       <hr/>

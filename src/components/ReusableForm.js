@@ -23,8 +23,8 @@ function ReusableForm(props) {
           placeholder='category' />
         <input
           type='file'
-          name='picture'
-          placeholder='picture' />
+          name='image'
+          placeholder='image' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

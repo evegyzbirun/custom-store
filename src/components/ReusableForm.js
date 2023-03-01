@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import {useForm} from "react-hook-form";
+import Product from './Product';
+
 
 
 function ReusableForm(props) {
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const {register} = useForm()
-
+  const handleFileInputChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  }
 
   return (
     <React.Fragment>
@@ -28,12 +31,16 @@ function ReusableForm(props) {
           name='category'
           placeholder='category' />
         <input
-          ref={register}
           type='file'
-          name='image' />
+          name='image'
+          onChange={handleFileInputChange} />
 
         <button type='submit'>{props.buttonText}</button>
       </form>
+      <form id ='image-upload'>
+
+      </form>
+      <Product image={selectedFile} />
     </React.Fragment>
   );
 }

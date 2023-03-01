@@ -12,11 +12,12 @@ function NewProductForm(props) {
       sku: event.target.sku.value, 
       color: event.target.color.value,
       category: event.target.category.value,
-      image: event.target.image.value,
+      image: event.target.image.null,
       id: v4()
     });
   }
 
+ 
   return (
     <React.Fragment>
       <ReusableForm 

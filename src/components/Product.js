@@ -2,6 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Product(props) {
+  const [imageSrc, setImageSrc] = React.useState(null);
+
+  React.useEffect(() => {
+    if (props.image) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImageSrc(reader.result);
+      };
+      reader.readAsDataURL(props.image);
+    }
+  }, [props.image]);
+
+
 
   return (
     <React.Fragment>
@@ -9,8 +22,9 @@ function Product(props) {
         <h3>{props.names} - {props.sku}</h3>
         <p><em>{props.color}</em></p>
         <p><em>{props.category}</em></p>
-        <p><em>{props.image}</em></p>
-        
+        {imageSrc && <img src={imageSrc} alt="Product" />}
+
+
         <hr />
       </div>
     </React.Fragment>

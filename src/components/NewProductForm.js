@@ -12,7 +12,7 @@ function NewProductForm(props) {
       sku: event.target.sku.value, 
       color: event.target.color.value,
       category: event.target.category.value,
-      image: event.target.image.null,
+      image: event.target.image.files[0],
       id: v4()
     });
   }

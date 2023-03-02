@@ -23,7 +23,7 @@ function Product(props) {
         <p><em>{props.color}</em></p>
         <p><em>{props.category}</em></p>
         {imageSrc && <img src={imageSrc} alt="Product" />}
-
+        
 
         <hr />
       </div>

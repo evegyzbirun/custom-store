@@ -14,6 +14,7 @@ function Product(props) {
     }
   }, [props.image]);
 
+  
 
 
   return (
@@ -22,8 +23,8 @@ function Product(props) {
         <h3>{props.names} - {props.sku}</h3>
         <p><em>{props.color}</em></p>
         <p><em>{props.category}</em></p>
-        {imageSrc && <img src={imageSrc} alt="Product" />}
-        
+        <p>{imageSrc && <img src={imageSrc} alt="Product" />}</p>
+
 
         <hr />
       </div>

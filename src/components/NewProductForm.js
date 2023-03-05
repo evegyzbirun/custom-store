@@ -12,6 +12,7 @@ function NewProductForm(props) {
       sku: event.target.sku.value, 
       color: event.target.color.value,
       category: event.target.category.value,
+      price: event.target.price.value,
       image: event.target.image.files[0],
       id: v4()
     });

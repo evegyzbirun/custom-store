@@ -10,9 +10,10 @@ function ProductDetail(props) {
       <h3>{product.sku} - {product.names}</h3>
       <p><em>{product.color}</em></p>
       <p><em>{product.category}</em></p>
+      <p><em>{product.price}$</em></p>
       <img src={URL.createObjectURL(product.image)} alt={product.name} />
       <button onClick={onClickingEdit}>Update Product</button>
-      <button onClick={() => onClickingDelete(product.id)}>Close Product</button>
+      <button onClick={() => onClickingDelete(product.id)}>Delete Product</button>
       <hr />
     </React.Fragment>
   );

@@ -13,6 +13,7 @@ function ProductList(props) {
           sku={product.sku}
           color={product.color}
           category={product.category}
+          price={product.price}
           image={product.image}
           id={product.id}
           key={product.id} />

@@ -31,13 +31,17 @@ function ReusableForm(props) {
           name='category'
           placeholder='category' />
         <input
+          type='number'
+          name='price'
+          placeholder='price' />
+        <input
           type='file'
           name='image'
           onChange={handleFileInputChange} />
 
         <button type='submit'>{props.buttonText}</button>
       </form>
-      <form id ='image-upload'>
+      <form id='image-upload'>
 
       </form>
       <Product image={selectedFile} />

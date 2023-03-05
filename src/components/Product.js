@@ -23,6 +23,7 @@ function Product(props) {
         <h3>{props.names} - {props.sku}</h3>
         <p><em>{props.color}</em></p>
         <p><em>{props.category}</em></p>
+        <p><em>{props.price}$</em></p>
         <p>{imageSrc && <img src={imageSrc} alt="Product" />}</p>
 
 
@@ -37,6 +38,7 @@ Product.propTypes = {
   sku: PropTypes.string,
   color: PropTypes.string,
   category: PropTypes.string,
+  price: PropTypes.number,
   image: PropTypes.instanceOf(File),
   id: PropTypes.string,
   whenProductClicked: PropTypes.func

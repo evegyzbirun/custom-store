@@ -3,16 +3,17 @@ import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
 
 
-function EditProductForm (props) {
+function EditProductForm(props) {
   const { product } = props;
 
   function handleEditProductFormSubmission(event) {
     event.preventDefault();
     props.onEditProduct({
-      names: event.target.names.value, 
-      sku: event.target.sku.value, 
+      names: event.target.names.value,
+      sku: event.target.sku.value,
       color: event.target.color.value,
       category: event.target.category.value,
+      price: event.target.price.value,
       image: event.target.image.files[0],
       id: product?.id
     });
@@ -20,8 +21,8 @@ function EditProductForm (props) {
 
   return (
     <React.Fragment>
-      <ReusableForm 
-        formSubmissionHandler={handleEditProductFormSubmission} 
+      <ReusableForm
+        formSubmissionHandler={handleEditProductFormSubmission}
         buttonText="Update Product" />
     </React.Fragment>
   );

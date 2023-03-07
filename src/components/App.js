@@ -1,14 +1,23 @@
 import React from "react";
+import Basket from "./Basket";
 import Header from "./Header";
 import ProductControl from "./ProductControl";
+import './App.css'
 
 
-function App(){
+function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <ProductControl />
-    </React.Fragment>
+
+
+    <div className="App">
+      <Header></Header>
+      <div className="row"></div>
+      <ProductControl></ProductControl>
+      <Basket></Basket>
+    </div>
+
+
+
   );
 }
 

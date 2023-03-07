@@ -14,21 +14,24 @@ function Product(props) {
     }
   }, [props.image]);
 
-  
+
 
 
   return (
     <React.Fragment>
-      <div onClick={() => props.whenProductClicked(props.id)}>
-        <h3>{props.names} - {props.sku}</h3>
-        <p><em>{props.color}</em></p>
-        <p><em>{props.category}</em></p>
-        <p><em>{props.price}$</em></p>
-        <p>{imageSrc && <img src={imageSrc} alt="Product" />}</p>
+      
+       
+          <div onClick={() => props.whenProductClicked(props.id)}>
+            <h3>{props.names} - {props.sku}</h3>
+            <p><em>{props.color}</em></p>
+            <p><em>{props.category}</em></p>
+            <p><em>{props.price}$</em></p>
+            <p>{imageSrc && <img src={imageSrc} alt="Product" />}</p>
 
 
-        <hr />
-      </div>
+            <hr />
+          </div>
+        
     </React.Fragment>
   );
 }

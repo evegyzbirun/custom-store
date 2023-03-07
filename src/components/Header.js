@@ -3,7 +3,18 @@ import React from "react";
 function Header() {
   return (
     <React.Fragment>
-      <h1>Store</h1>
+      <header className="row block center">
+        <div>
+          <h1>Store(Header)</h1>
+          <a href="#/">
+            <h1>shoping cart</h1>
+          </a>
+        </div>
+        <div>
+          <a href="#/cart">Cart</a> <a href="#/signin">SignIn</a>
+        </div>
+      </header>
+
     </React.Fragment>
   );
 }

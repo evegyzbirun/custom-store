@@ -82,12 +82,15 @@ class ProductControl extends React.Component {
       currentlyVisibleState = <NewProductForm onNewProductCreation={this.handleAddingNewProductToList} />;
       buttonText = "Return to Product List";
     } else {
-      currentlyVisibleState = <ProductList onProductSelection={this.handleChangingSelectedProduct} productList={this.state.mainProductList} />;
-      buttonText = "Add Product";
+      currentlyVisibleState = 
+      <ProductList onProductSelection={this.handleChangingSelectedProduct} productList={this.state.mainProductList} />;
+     buttonText = "Add Product"
+      
     }
     return (
       <React.Fragment>
         
+            <button onClick={this.handleClick}>{buttonText}</button>
             {currentlyVisibleState}
             <button onClick={this.handleClick}>{buttonText}</button>
          

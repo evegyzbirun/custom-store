@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import AddToCartButton from "./AddToCartButton";
 
 function Product(props) {
   const [imageSrc, setImageSrc] = React.useState(null);
+  const [cartItems, setCartItems] = React.useState([]);
+
+  function handleAddToCart(id) {
+    const item = { id, quantity: 1 };
+    setCartItems([...cartItems, item]);
+  }
 
   React.useEffect(() => {
     if (props.image) {
@@ -14,24 +21,28 @@ function Product(props) {
     }
   }, [props.image]);
 
-
-
-
   return (
     <React.Fragment>
-      
-       
+      <main className="block col-2">
+        <div className="row">
           <div onClick={() => props.whenProductClicked(props.id)}>
-            <h3>{props.names} - {props.sku}</h3>
-            <p><em>{props.color}</em></p>
-            <p><em>{props.category}</em></p>
-            <p><em>{props.price}$</em></p>
-            <p>{imageSrc && <img src={imageSrc} alt="Product" />}</p>
-
-
+            <p>{imageSrc && <img className="small" src={imageSrc} alt="Product" />}</p>
+            <h2>Name: {props.names} </h2>
+            <h2>Color: <em>{props.color}</em></h2>
+            <h2>Category: <em>{props.category}</em></h2>
+            <h2>Product number(sku): <em>{props.sku}</em></h2>
+            <h2>Price: <em>${props.price}</em></h2>
+            
             <hr />
+            
           </div>
-        
+        </div>
+      </main>
+      {!props.hideButton && (
+              <div className="">
+                <AddToCartButton onClick={() => handleAddToCart(props.id)} />
+              </div>
+            )}
     </React.Fragment>
   );
 }
@@ -42,9 +53,10 @@ Product.propTypes = {
   color: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
-  image: PropTypes.instanceOf(File),
+  image: PropTypes.object,
   id: PropTypes.string,
-  whenProductClicked: PropTypes.func
-}
+  whenProductClicked: PropTypes.func,
+  hideButton: PropTypes.bool,
+};
 
 export default Product;

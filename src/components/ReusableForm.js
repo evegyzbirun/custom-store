@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import Product from './Product';
 
-
-
 function ReusableForm(props) {
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -13,7 +11,7 @@ function ReusableForm(props) {
 
   return (
     <React.Fragment>
-      <form onSubmit={props.formSubmissionHandler}>
+      <form className='form' onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
           name='names'
@@ -44,7 +42,7 @@ function ReusableForm(props) {
       <form id='image-upload'>
 
       </form>
-      <Product image={selectedFile} />
+      <Product image={selectedFile} hideButton={true} />
     </React.Fragment>
   );
 }
@@ -55,3 +53,4 @@ ReusableForm.propTypes = {
 };
 
 export default ReusableForm;
+

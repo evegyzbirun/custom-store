@@ -1,11 +1,11 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Helvetica';
 }
 
 h1,
 h2,
 h3 {
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
 }
 
 h1 {
@@ -20,6 +20,10 @@ h3 {
   font-size: 1rem;
 }
 
+.space-detail {
+  margin-bottom: 10px;
+}
+
 a {
   text-decoration: none;
 }
@@ -29,10 +33,11 @@ a {
   justify-content: space-between;
 }
 
+
+
 .row.center {
   align-items: center;
 }
-
 
 .col-1 {
   flex: 1;
@@ -43,12 +48,35 @@ a {
 }
 
 .block {
-  background-color: rgb(208, 139, 28);
+  background-color: #940000;
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
 
-.row.center {
-  align-items: center;
+img.small {
+  max-height: 8rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin: 0.1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem black solid;
+  background-color: aqua;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.add {
+  background-color: aqua;
+  width: 10rem;
+}
+button.remove{
+  background-color: aqua;
+  width: 1.5rem;
+}
+form.form {
+  width: 10rem;
 }

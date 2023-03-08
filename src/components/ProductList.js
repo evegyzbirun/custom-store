@@ -3,14 +3,17 @@ import Product from "./Product";
 import PropTypes from "prop-types";
 
 function ProductList(props) {
+
   return (
 
     <main className="block col-2">
-      <div>Product List(main)</div>
+      <h2>Products List(main)</h2>
       <hr />
       <div className="row">
         {props.productList.map((product) =>
+
           <Product
+
             whenProductClicked={props.onProductSelection}
             names={product.names}
             sku={product.sku}
@@ -20,6 +23,7 @@ function ProductList(props) {
             image={product.image}
             id={product.id}
             key={product.id} />
+
         )}
       </div>
     </main>

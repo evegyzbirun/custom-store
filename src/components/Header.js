@@ -5,9 +5,9 @@ function Header() {
     <React.Fragment>
       <header className="row block center">
         <div>
-          <h1>Store(Header)</h1>
+          <h1>Store</h1>
           <a href="#/">
-            <h1>shoping cart</h1>
+            <h1>Shoping Cart</h1>
           </a>
         </div>
         <div>

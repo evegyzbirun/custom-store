@@ -35,6 +35,8 @@ function ReusableForm(props) {
         <input
           type='file'
           name='image'
+          accept='image/*'
+          // multiple
           onChange={handleFileInputChange} />
 
         <button type='submit'>{props.buttonText}</button>

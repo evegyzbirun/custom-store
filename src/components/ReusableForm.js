@@ -16,6 +16,7 @@ function ReusableForm(props) {
 
   const handleFileInputChange = (event) => {
     const files = Array.from(event.target.files);
+    
     setSelectedFile(files);
   };
 

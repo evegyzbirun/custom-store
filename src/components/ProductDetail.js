@@ -30,6 +30,7 @@ ProductDetail.propTypes = {
   product: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func
+ 
 };
 
 export default ProductDetail;

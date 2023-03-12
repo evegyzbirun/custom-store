@@ -42,7 +42,11 @@ class ProductControl extends React.Component {
 
   handleEditClick = () => {
     this.setState({ editing: true });
+    
+
   }
+
+ 
 
   handleEditingProductInList = (productToEdit) => {
     const editedMainProductList = this.state.mainProductList
@@ -76,7 +80,8 @@ class ProductControl extends React.Component {
       currentlyVisibleState = <ProductDetail
         product={this.state.selectedProduct}
         onClickingDelete={this.handleDeletingProduct}
-        onClickingEdit={this.handleEditClick} />
+        onClickingEdit={this.handleEditClick}
+         />
       buttonText = "Return to Product List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewProductForm onNewProductCreation={this.handleAddingNewProductToList} />;

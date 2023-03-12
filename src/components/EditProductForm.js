@@ -8,12 +8,12 @@ function EditProductForm(props) {
 
   function handleEditProductFormSubmission(event) {
     event.preventDefault();
-
+  
     const images = [];
     for (let i = 0; i < event.target.image.files.length; i++) {
       images.push(event.target.image.files[i]);
     }
-
+  
     props.onEditProduct({
       names: event.target.names.value,
       sku: event.target.sku.value,
@@ -24,6 +24,7 @@ function EditProductForm(props) {
       id: product?.id
     });
   }
+  
 
   return (
     <React.Fragment>

@@ -9,9 +9,8 @@ function ProductList(props) {
       <hr />
       <div className="row">
         {props.productList.map((product) => {
-
           return (
-            <React.Fragment>
+            <React.Fragment key={product.id}>
               <Product
                 whenProductClicked={() => props.onProductSelection(product.id)}
                 names={product.names}
@@ -21,7 +20,6 @@ function ProductList(props) {
                 price={Number(product.price)}
                 images={product.image && product.image.length > 0 ? [product.image[0]] : []}
                 id={product.id}
-                key={product.id}
               />
             </React.Fragment>
           );

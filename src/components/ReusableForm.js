@@ -16,7 +16,9 @@ function ReusableForm(props) {
         <input
           type='text'
           name='names'
-          placeholder='Product Name' />
+          placeholder='Product Name'
+          
+        />
         <input
           type='text'
           name='sku'

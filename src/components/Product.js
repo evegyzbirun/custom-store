@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import AddToCartButton from "./AddToCartButton";
 
 function Product(props) {
+  // const { product, onAdd} = props;
   const [imageSrc, setImageSrc] = React.useState([]);
   const [cartItems, setCartItems] = React.useState([]);
 
@@ -58,7 +59,9 @@ function Product(props) {
                 <AddToCartButton onClick={() => handleAddToCart(props.id)} />
               </div>
             )}
+            
     </React.Fragment>
+    
   );
 }
 

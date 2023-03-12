@@ -52,13 +52,14 @@ function Product(props) {
             <hr />
             
           </div>
-        </div>
-      </main>
-      {!props.hideButton && (
+          {!props.hideButton && (
               <div className="">
                 <AddToCartButton onClick={() => handleAddToCart(props.id)} />
               </div>
             )}
+        </div>
+      </main>
+      
             
     </React.Fragment>
     
@@ -70,7 +71,7 @@ Product.propTypes = {
   sku: PropTypes.string,
   color: PropTypes.string,
   category: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.object),
   id: PropTypes.string,
   whenProductClicked: PropTypes.func,

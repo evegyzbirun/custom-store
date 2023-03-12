@@ -10,7 +10,7 @@ function ProductDetail(props) {
         <h1>Products: </h1>
         <div className="product-images">
           {product.image.map((file) => (
-            <img key={file.name} className="small" src={URL.createObjectURL(file)} alt={file.name} />
+            <img key={file.name} className="small" src={URL.createObjectURL(file)} alt={file.name} style={{ marginRight: '10px' }} />
           ))}
         </div>
         <h2>Name: {product.names} </h2>

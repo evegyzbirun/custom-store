@@ -11,17 +11,19 @@ function ProductList(props) {
         {props.productList.map((product) => {
 
           return (
-            <Product
-            whenProductClicked={() => props.onProductSelection(product.id)}
-              names={product.names}
-              sku={product.sku}
-              color={product.color}
-              category={product.category}
-              price={Number(product.price)}
-              image={product.image && product.image.length > 0 ? product.image[0] : null}
-              id={product.id}
-              key={product.id}
-            />
+            <React.Fragment>
+              <Product
+                whenProductClicked={() => props.onProductSelection(product.id)}
+                names={product.names}
+                sku={product.sku}
+                color={product.color}
+                category={product.category}
+                price={Number(product.price)}
+                images={product.image && product.image.length > 0 ? [product.image[0]] : []}
+                id={product.id}
+                key={product.id}
+              />
+            </React.Fragment>
           );
         })}
       </div>

@@ -3,31 +3,29 @@ import Product from "./Product";
 import PropTypes from "prop-types";
 
 function ProductList(props) {
-
   return (
-
     <main className="block col-2">
       <h2>Products List(main)</h2>
       <hr />
       <div className="row">
-        {props.productList.map((product) =>
+        {props.productList.map((product) => {
 
-          <Product
-
-            whenProductClicked={props.onProductSelection}
-            names={product.names}
-            sku={product.sku}
-            color={product.color}
-            category={product.category}
-            price={product.price}
-            image={product.image}
-            id={product.id}
-            key={product.id} />
-
-        )}
+          return (
+            <Product
+            whenProductClicked={() => props.onProductSelection(product.id)}
+              names={product.names}
+              sku={product.sku}
+              color={product.color}
+              category={product.category}
+              price={Number(product.price)}
+              image={product.image && product.image.length > 0 ? product.image[0] : null}
+              id={product.id}
+              key={product.id}
+            />
+          );
+        })}
       </div>
     </main>
-
   );
 }
 

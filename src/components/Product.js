@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import AddToCartButton from "./AddToCartButton";
 
 function Product(props) {
-  const [imageSrc, setImageSrc] = React.useState(null);
+  const [imageSrc, setImageSrc] = React.useState([]);
   const [cartItems, setCartItems] = React.useState([]);
 
   function handleAddToCart(id) {
@@ -12,21 +12,36 @@ function Product(props) {
   }
 
   React.useEffect(() => {
-    if (props.image) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImageSrc(reader.result);
-      };
-      reader.readAsDataURL(props.image);
+    if (props.images) {
+      const readerPromises = props.images.map((image) => {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            resolve(reader.result);
+          };
+          reader.onerror = () => {
+            reject(new Error(`Failed to read image ${image.name}`));
+          };
+          reader.readAsDataURL(image);
+        });
+      });
+      Promise.all(readerPromises).then((results) => {
+        setImageSrc(results);
+      });
     }
-  }, [props.image]);
+  }, [props.images]);
+
 
   return (
     <React.Fragment>
       <main className="block col-2">
         <div className="row">
           <div onClick={() => props.whenProductClicked(props.id)}>
-            <p>{imageSrc && <img className="small" src={imageSrc} alt="Product" />}</p>
+          <div className="product-images">
+              {imageSrc.map((src, index) => (
+                <img className="small" key={index} src={src} alt="Product" />
+              ))}
+            </div>
             <h2>Name: {props.names} </h2>
             <h2>Color: <em>{props.color}</em></h2>
             <h2>Category: <em>{props.category}</em></h2>
@@ -53,7 +68,7 @@ Product.propTypes = {
   color: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
-  image: PropTypes.object,
+  images: PropTypes.arrayOf(PropTypes.object),
   id: PropTypes.string,
   whenProductClicked: PropTypes.func,
   hideButton: PropTypes.bool,

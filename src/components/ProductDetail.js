@@ -8,7 +8,11 @@ function ProductDetail(props) {
     <React.Fragment>
       <div className="space-detail">
         <h1>Products: </h1>
-        <img className="small" src={URL.createObjectURL(product.image)} alt={product.name} />
+        <div className="product-images">
+          {product.image.map((file) => (
+            <img key={file.name} className="small" src={URL.createObjectURL(file)} alt={file.name} />
+          ))}
+        </div>
         <h2>Name: {product.names} </h2>
         <h2>Color: <em>{product.color}</em></h2>
         <h2>Category: <em>{product.category}</em></h2>

@@ -8,13 +8,19 @@ function EditProductForm(props) {
 
   function handleEditProductFormSubmission(event) {
     event.preventDefault();
+
+    const images = [];
+    for (let i = 0; i < event.target.image.files.length; i++) {
+      images.push(event.target.image.files[i]);
+    }
+
     props.onEditProduct({
       names: event.target.names.value,
       sku: event.target.sku.value,
       color: event.target.color.value,
       category: event.target.category.value,
       price: event.target.price.value,
-      image: event.target.image.files[0],
+      image: images,
       id: product?.id
     });
   }

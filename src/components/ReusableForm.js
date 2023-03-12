@@ -6,8 +6,9 @@ function ReusableForm(props) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileInputChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  }
+    const files = Array.from(event.target.files);
+    setSelectedFile(files);
+  };
 
   return (
     <React.Fragment>
@@ -36,7 +37,7 @@ function ReusableForm(props) {
           type='file'
           name='image'
           accept='image/*'
-          // multiple
+          multiple
           onChange={handleFileInputChange} />
 
         <button type='submit'>{props.buttonText}</button>
